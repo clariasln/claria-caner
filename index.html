@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<link rel="stylesheet" href="c.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2609 | Gizli Arşiv</title>
+
+</head>
+
+<body>
+
+<div id="welcome">
+
+    <div class="welcome-box">
+
+        <div class="welcome-icon">◈</div>
+
+        <span class="welcome-label">
+            GİZLİ DEVLET ARŞİVİ // DOSYA NO: 2609
+        </span>
+
+        <h1>CLARİA <span>&</span> CANER'İN<br>SUÇ DOSYASI</h1>
+
+        <p>
+            İki şüpheli, sayısız suçlama ve<br>
+            hiç sona ermeyecek bir ilişki.
+        </p>
+
+        <button class="red-btn" onclick="enterSite()">
+            DEVAM ET →
+        </button>
+
+        <div class="welcome-footer">
+            UNAUTHORIZED ACCESS PROHIBITED
+        </div>
+
+    </div>
+
+</div>
+
+<div id="app" style="display: block;">
+
+<header>
+    <div class="logo">◈ DOSYA 2609</div>
+    <div class="status">● SYSTEM ONLINE</div>
+</header>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<h4>ANA MENÜ</h4>
+
+<button class="nav active" onclick="showPage('home',this)">▣ Genel Bakış</button>
+<button class="nav" onclick="showPage('suspects',this)">◉ Şüpheliler</button>
+<button class="nav" onclick="showPage('cases',this)">▤ Suç Dosyaları</button>
+<button class="nav" onclick="showPage('evidence',this)">⌕ Delil Arşivi</button>
+<button class="nav" onclick="showPage('court',this)">⚖ Mahkeme</button>
+
+</aside>
+
+<main>
+
+<section id="home" class="page active">
+
+<span class="badge">AKTİF SORUŞTURMA</span>
+
+<h2>OPERASYON MERKEZİ</h2>
+
+<p class="subtitle">
+İlişki kaynaklı vakaların merkezi takip sistemi.
+</p>
+
+<div class="stats">
+    <div class="stat"><h3>02</h3><p>ŞÜPHELİ</p></div>
+    <div class="stat"><h3>04</h3><p>SUÇ DOSYASI</p></div>
+    <div class="stat"><h3>∞</h3><p>SABIR TÜKETİMİ</p></div>
+    <div class="stat"><h3>00</h3><p>MANTIK SEVİYESİ</p></div>
+</div>
+
+<div class="warning">
+    <h3>⚠ SON DAKİKA RAPORU</h3>
+    Şüpheli 001'in yeniden sinirlendiği,
+    şüpheli 002'nin ise sakinliğini koruduğu
+    tespit edilmiştir.
+</div>
+
+<h3>SON İŞLEM GÖREN DOSYALAR</h3>
+
+<div class="grid">
+    <div class="card">
+        <span class="badge">DOSYA 001</span>
+        <h3>Sabır Sömürüsü</h3>
+        <p>Şüpheli 002'nin sabır kaynaklarının
+        sistematik olarak tüketilmesi.</p>
+    </div>
+
+    <div class="card">
+        <span class="badge">DOSYA 002</span>
+        <h3>Aşırı Sakinlik</h3>
+        <p>Şüpheli 002'nin tartışma anında
+        bile sakin kalması.</p>
+    </div>
+</div>
+
+</section>
+
+<section id="suspects" class="page">
+
+<h2>ŞÜPHELİ PROFİLLERİ</h2>
+<p class="subtitle">Soruşturma kapsamındaki şahıslar.</p>
+
+<div class="grid">
+
+<div class="card profile">
+    <div class="number">ŞÜPHELİ NO: 001</div>
+    <h3>CLARİA</h3>
+    <span class="badge">YÜKSEK RİSK</span>
+    <p>Suçlamalar:</p>
+    <p>• Ani kriz çıkarma</p>
+    <p>• Sabır tüketme</p>
+    <p>• Gereksiz sinirlenme</p>
+    <p>• Mantık dışı kararlar</p>
+</div>
+
+<div class="card profile">
+    <div class="number">ŞÜPHELİ NO: 002</div>
+    <h3>CANER</h3>
+    <span class="badge">GÖZLEM ALTINDA</span>
+    <p>Suçlamalar:</p>
+    <p>• Aşırı sakinlik</p>
+    <p>• Her şeyi alttan alma</p>
+    <p>• Olağanüstü sabır</p>
+    <p>• İstifa edememe</p>
+</div>
+
+</div>
+</section>
+
+<section id="cases" class="page">
+
+<h2>GİZLİ SUÇ DOSYALARI</h2>
+<p class="subtitle">İncelemek istediğiniz soruşturmayı seçin.</p>
+
+<div class="grid">
+
+<div class="card">
+    <span class="badge">KRİTİK DOSYA</span>
+    <h3>001 // Sabır Sömürüsü</h3>
+    <p>Şüpheli 001'in şüpheli 002'nin sabır
+    rezervlerini tükettiği tespit edilmiştir.</p>
+    <button onclick="toggleCase('case1')">DOSYAYI AÇ</button>
+    <div class="case-details" id="case1">
+        <p><b>DELİL:</b> Şüpheli 002 hâlâ sakin.</p>
+        <p><b>KARAR:</b> Sabır madalyası verilmesine
+        karar verilmiştir.</p>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge">GİZLİ DOSYA</span>
+    <h3>002 // Aşırı Sakinlik</h3>
+    <p>Şüpheli 002'nin kriz anlarında
+    sakinliğini koruduğu gözlemlenmiştir.</p>
+    <button onclick="toggleCase('case2')">DOSYAYI AÇ</button>
+    <div class="case-details" id="case2">
+        <p><b>DELİL:</b> Tartışma sırasında
+        sakin konuşmaya devam etmesi.</p>
+        <p><b>KARAR:</b> Sınırsız sabır
+        şüphesiyle takibe alınmıştır.</p>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge">ÇÖZÜLEMEDİ</span>
+    <h3>003 // Mantık Kaybı</h3>
+    <p>Olay yerinde mantık unsuruna
+    rastlanmamıştır.</p>
+    <button onclick="toggleCase('case3')">DOSYAYI AÇ</button>
+    <div class="case-details" id="case3">
+        <p><b>DELİL:</b> Bir şey yok denmesine
+        rağmen çok fazla şey olması.</p>
+        <p><b>KARAR:</b> Dosya kapatılamamıştır.</p>
+    </div>
+</div>
+
+<div class="card">
+    <span class="badge">MÜKERRER SUÇ</span>
+    <h3>004 // Tekrarlanan Tartışma</h3>
+    <p>Barışmanın ardından aynı olayların
+    tekrar yaşanması.</p>
+    <button onclick="toggleCase('case4')">DOSYAYI AÇ</button>
+    <div class="case-details" id="case4">
+        <p><b>DELİL:</b> Barışmadan kısa süre
+        sonra yeni kriz.</p>
+        <p><b>KARAR:</b> Her iki taraf da suçlu.</p>
+    </div>
+</div>
+
+</div>
+</section>
+
+<section id="evidence" class="page">
+
+<div class="photo-section">
+
+    <span class="badge">GİZLİ GÖRSEL KANITLAR</span>
+
+    <h2>FOTOĞRAF DELİL ARŞİVİ</h2>
+
+    <p class="subtitle">
+        Soruşturma kapsamında ele geçirilen
+        özel görsel kayıtlar.
+    </p>
+
+    <div class="photo-gallery">
+
+        <div class="photo-card">
+            <img src="fotoğraflar/0drhpnh.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 001</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_7310.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 002</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_7903.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 003</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_7904.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 004</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_7923.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 005</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_8325.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 006</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_8415.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 007</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_8418.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 008</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_8422.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 009</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_8475.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 0010</h4>
+            <alt>Şüpheli 001 Şüpheli 002yi yanyanayken aldatmış</alt>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/IMG_7904.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 0011</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/n2tsh0p.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 0012</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/SELİNSELİN.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 0013</h4>
+        </div>
+
+        <div class="photo-card">
+            <img src="fotoğraflar/ship.png"
+                 onclick="openPhoto(this.src)">
+            <h4>DELİL NO: 0014</h4>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+<section id="court" class="page">
+
+<h2>YÜKSEK İLİŞKİ MAHKEMESİ</h2>
+<p class="subtitle">DOSYA NO: 001-X / NİHAİ KARAR</p>
+
+<div class="card">
+    <h3>MAHKEME KARARI</h3>
+    <br>
+    <p>Yapılan soruşturma sonucunda iki tarafın
+    da birbirinden ayrılamama konusunda suç ortağı
+    olduğu kanaatine varılmıştır.</p>
+    <br>
+    <h2 style="color:#e34b5c">İKİ TARAF DA SUÇLU.</h2>
+    <br>
+    <p>VERİLEN CEZA:</p>
+    <p>Birbirini sevmeye ve birlikte saçmalamaya
+    devam etmek.</p>
+    <br>
+    <span class="badge">KARAR KESİNLEŞTİ</span>
+</div>
+
+</section>
+
+</main>
+</div>
+
+<footer>
+    CLARİA VE CANERİN SUÇ DOSYASI // GİZLİ ARŞİV
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
