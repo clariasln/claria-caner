@@ -1,0 +1,1 @@
+ilkten aşksal bi site yapıcaktım fikrimi arkadaşlarıma söyleyince tastas geçtiler sonra dedim ki saçma sapan bisi yapim konusunu da benim çingeneliğim ve canerin sabır taşı olması olsun bir de anı kısmı ekleyeyim yani çok da mantık aramayın babay
